@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.github.brianwyka
+testFramework: spock
+sourceLanguage: java
+buildTool: maven
+features: [app-name, docker, file-watch, graalvm, http-client, java, java-application, kafka, logback, maven, netty-server, readme, shade, spock, yaml]

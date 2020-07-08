@@ -1,0 +1,22 @@
+micronaut:
+  application:
+    name: micronaut-kafka-graal-native-image
+
+---
+# Kafka Consumer Thread Configuration - https://micronaut-projects.github.io/micronaut-kafka/latest/guide/#kafkaListener
+
+micronaut:
+  executors:
+    consumer:
+      type: fixed
+      nThreads: 75
+
+---
+# Kafka Configuration - https://micronaut-projects.github.io/micronaut-kafka/latest/guide
+
+kafka:
+  health.enabled: false
+  client.id: ${micronaut.application.name}-local
+  bootstrap.servers: localhost:9092
+  security.protocol: PLAINTEXT
+
